@@ -2,8 +2,6 @@
 
 PLUGIN_NAME = 'gulp-modify'
 
-fs      = require 'fs'
-_       = require 'lodash'
 through = require 'through2'
 
 module.exports = (options = {}) ->

@@ -1,48 +1,35 @@
 {
   "name": "gulp-modify",
   "description": "",
-  "url": "https://github.com/medialwerk/gulp-modify",
+  "url": "https://github.com/efacilitation/gulp-modify",
   "author": {
-    "name": "Ferdinand Full",
-    "email": "reg@medialwerk.de"
+    "name": "eFa Team",
+    "email": "team@efa-gmbh.com"
   },
   "version": "0.0.1",
   "license": "MIT",
   "main": "index.coffee",
   "repository": {
     "type": "git",
-    "url": "https://github.com/medialwerk/gulp-commonjs-wrap.git"
+    "url": "https://github.com/efacilitation/gulp-modify"
   },
   "bugs": {
-    "url": "https://github.com/medialwerk/gulp-commonjs-wrap/issues"
+    "url": "https://github.com/efacilitation/gulp-modify/issues"
   },
   "keywords": [
     "gulp",
     "gulpplugin",
-    "commonjs",
-    "wrapper",
-    "wrap"
+    "modify"
   ],
   "scripts": {
     "test": "mocha"
   },
   "dependencies": {
-    "lodash": "*",
-    "gulp-util": "*",
     "through2": "*",
     "coffee-script": "*"
   },
   "devDependencies": {
     "mocha": "*",
     "expect": "*"
-  },
-  "readme": "## Information\n\n<table>\n<tr> \n<td>Package</td><td>gulp-commonjs-wrap</td>\n</tr>\n<tr>\n<td>Description</td>\n<td>Wraps .js files into CommonJS require.register defintion for browser usage.</td>\n</tr>\n</table>\n\n## Usage\n\nFirst, install `gulp-commonjs-wrap` as a development dependency:\n\n```shell\nnpm install --save-dev gulp-commonjs-wrap\n```\n\nThen, add it to your `gulpfile.js`:\n\n```javascript\nvar commonjsWrap = require('gulp-commonjs-wrap');\n\ngulp.task('commonjs', function(){\n  gulp.src(['lib/*.js'])\n    .pipe(commonjsWrap())\n    .pipe(gulp.dest('build/'));\n});\n```\n\n\n### CommonJS loader\nYou'll need a loader to detect your wrapped packages. You can use this simple [CommonJS loader](https://github.com/brunch/commonjs-require-definition) which is based off how [brunch.io](http://brunch.io) loads CommonJS packages.\n\n[grunt]: https://github.com/gruntjs/grunt\n[getting_started]: https://github.com/gruntjs/grunt/wiki/Getting-started\n\n## API\n\n### commonjsWrap(options)\n\n#### options.autoRequire\nType: `Boolean`  \nDefault: `false`\n\nWhether to append a require() on the `filepath` directly after the wrap.\n\nExample:\n\n```javascript\nvar commonjsWrap = require('gulp-commonjs-wrap');\n\ngulp.task('commonjs', function(){\n  gulp.src(['lib/*.js'])\n    .pipe(commonjsWrap({\n      autoRequire: true\n    }))\n    .pipe(gulp.dest('build/'));\n});\n```\n\n#### options.pathModifier\nType: `Function`  \nDefault: `false`\n\nAllows you to set a function in which you can modify the filepath.\n\nExample:\n\n```javascript\nvar commonjsWrap = require('gulp-commonjs-wrap');\n\ngulp.task('commonjs', function(){\n  gulp.src(['lib/*.js'])\n    .pipe(commonjsWrap({\n      pathModifier: function (path) {\n        path = path.replace /.js$/, ''\n        return path\n      }\n    }))\n    .pipe(gulp.dest('build/'));\n});\n```\n\n\n## License\nLicensed under the MIT license.\n",
-  "readmeFilename": "README.md",
-  "homepage": "https://github.com/medialwerk/gulp-commonjs-wrap",
-  "_id": "gulp-commonjs-wrap@0.0.4",
-  "dist": {
-    "shasum": "1d46b7252750a2635cf60dbe8ca3e1990a8eecdc"
-  },
-  "_from": "gulp-commonjs-wrap@0.0.4",
-  "_resolved": "https://registry.npmjs.org/gulp-commonjs-wrap/-/gulp-commonjs-wrap-0.0.4.tgz"
+  }
 }
