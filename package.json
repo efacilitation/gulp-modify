@@ -1,12 +1,12 @@
 {
   "name": "gulp-modify",
-  "description": "",
+  "description": "Modify the content of vinyl files with custom callback function.",
   "url": "https://github.com/efacilitation/gulp-modify",
   "author": {
     "name": "eFa Team",
     "email": "team@efa-gmbh.com"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "main": "index.coffee",
   "repository": {
