@@ -6,9 +6,9 @@
     "name": "eFa Team",
     "email": "team@efa-gmbh.com"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
-  "main": "index.coffee",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/efacilitation/gulp-modify"
@@ -22,14 +22,15 @@
     "modify"
   ],
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "node_modules/.bin/coffee -c index.coffee"
   },
   "dependencies": {
-    "through2": "*",
-    "coffee-script": "*"
+    "through2": "*"
   },
   "devDependencies": {
     "mocha": "*",
-    "expect": "*"
+    "expect": "*",
+    "coffee-script": "*"
   }
 }
