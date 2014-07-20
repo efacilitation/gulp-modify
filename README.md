@@ -18,9 +18,11 @@ var modify = require('gulp-modify');
 
 gulp.task('default', function () {
 	gulp.src('src/app.ext')
-		.pipe(modify(function(content) {
-      return 'modified'
-    }))
+		.pipe(modify({
+			fileModifier: function(file, contents) {
+      				return 'modified';
+    			}
+		}))
 		.pipe(gulp.dest('dist'));
 });
 ```
