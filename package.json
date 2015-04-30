@@ -26,7 +26,8 @@
     "prepublish": "node_modules/.bin/coffee -c index.coffee"
   },
   "dependencies": {
-    "through2": "*"
+    "through2": "*",
+    "gulp-util": "*"
   },
   "devDependencies": {
     "mocha": "*",
