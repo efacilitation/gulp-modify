@@ -3,7 +3,7 @@
 PLUGIN_NAME = 'gulp-modify'
 
 through = require 'through2'
-gutil = require 'gutil'
+gutil = require 'gulp-util'
 
 module.exports = (options = {}) ->
 
