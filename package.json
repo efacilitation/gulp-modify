@@ -30,8 +30,9 @@
     "gulp-util": "*"
   },
   "devDependencies": {
-    "mocha": "*",
-    "expect": "*",
-    "coffee-script": "*"
+    "coffee-script": "*",
+    "gulp": "*",
+    "gulp-util": "*",
+    "gulp-bump": "*"
   }
 }
